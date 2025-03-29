@@ -356,6 +356,63 @@ Why Branching is Crucial for Collaboration
 ✅ Keeps the `main` Branch Stable – Only tested code is merged.  
 
 ## Explore the role of pull requests in the GitHub workflow. How do they facilitate code review and collaboration, and what are the typical steps involved in creating and merging a pull request?
+  Role of Pull Requests in the GitHub Workflow**  
+A *Pull Request (PR)* is a feature in GitHub that enables developers to propose changes to a repository before merging them into the main branch. PRs facilitate *code review, discussion, and collaboration*, ensuring high-quality code contributions.  
+
+✅ Encourages Code Review & Feedback  
+✅ Prevents Direct Changes to the Main Branch  
+✅ Supports Collaboration Among Developers 
+✅ Allows Automated Testing & CI/CD Integration  
+
+Typical Steps in Creating & Merging a Pull Request  
+
+1️⃣ Create a Branch & Make Changes  
+- Create a new branch and switch to it:  
+  ```bash
+  git checkout -b feature-branch
+  ```
+- Make changes, then commit:  
+  ```bash
+  git add .
+  git commit -m "Added new feature"
+  ```
+
+2️⃣ Push the Branch to GitHub  
+```bash
+git push origin feature-branch
+```
+
+3️⃣ Open a Pull Request on GitHub  
+- Go to your repository on GitHub.  
+- Click *"Compare & pull request"* next to the pushed branch.  
+- Add a *title*, *description*, and select reviewers.  
+
+4️⃣ Review & Discuss Changes  
+- Team members review the code, leave comments, and request changes if needed.  
+- Automated tests (CI/CD) may run to check for errors.  
+
+5️⃣ Merge the Pull Request  
+Once approved:  
+- Click "Merge Pull Request" on GitHub.  
+- Alternatively, merge locally:  
+  ```bash
+  git checkout main
+  git pull origin main
+  git merge feature-branch
+  git push origin main
+  ```
+
+6️⃣ Delete the Feature Branch (Optional) 
+```bash
+git branch -d feature-branch
+git push origin --delete feature-branch
+```
+
+How Pull Requests Improve Collaboration  
+✅ Ensures Peer Review & Higher Code Quality  
+✅ Allows Discussion Before Merging  
+✅ Integrates CI/CD for Automated Testing  
+✅ Tracks Changes & Keeps a Clear History  
 
 ## Discuss the concept of "forking" a repository on GitHub. How does forking differ from cloning, and what are some scenarios where forking would be particularly useful?
   Concept of Forking a Repository on GitHub  
