@@ -215,6 +215,76 @@ Choose Private if you are developing proprietary software or handling sensitive 
 
 
 ## Detail the steps involved in making your first commit to a GitHub repository. What are commits, and how do they help in tracking changes and managing different versions of your project?
+    What Are Commits in Git?  
+A *commit* in Git is a *snapshot* of changes made to a project at a specific point in time. Each commit records:  
+✅ The exact changes made to files.  
+✅ A unique commit ID (SHA hash) for tracking.  
+✅ A commit message describing the changes.  
+✅ The author and timestamp of the commit.  
+
+Commits help in *tracking changes*, *collaborating with teams*, and *reverting to previous versions* if needed.  
+
+Step 1: Create a GitHub Repository
+1. Go to [GitHub](https://github.com/) and log in.  
+2. Click **"+"** (top-right) → **"New repository"**.  
+3. Enter a repository name and choose **Public or Private**.  
+4. (Optional) Initialize with a **README** file.  
+5. Click **"Create repository"**.  
+
+ Step 2: Clone the Repository to Your Local Machine  
+To work locally, clone the repository using:  
+```bash
+git clone https://github.com/your-username/repository-name.git
+```
+Then navigate to the repo:  
+```bash
+cd repository-name
+```
+ Step 3: Create or Modify a File  
+For example, create a new `index.html` file:  
+```bash
+echo "<h1>Hello, GitHub!</h1>" > index.html
+```
+ Step 4: Initialize Git (If Not Already Done) 
+If the repository is new (not cloned), initialize Git:  
+```bash
+git init
+```
+ Step 5: Stage the File for Commit  
+Add the new file to the staging area:  
+```bash
+git add index.html
+```
+To add all changes:  
+```bash
+git add .
+```
+ Step 6: Commit the Changes  
+Create a commit with a descriptive message:  
+```bash
+git commit -m "Initial commit: Added index.html"
+```
+
+ Step 7: Connect to the Remote Repository (If Not Cloned)  
+If you started from a local folder, link it to GitHub:  
+```bash
+git remote add origin https://github.com/your-username/repository-name.git
+```
+
+ Step 8: Push the Commit to GitHub  
+Send the commit to GitHub:  
+```bash
+git push origin main
+```
+For older repositories using `master`:  
+```bash
+git push origin master
+```
+How Commits Help in Version Control
+✅ Track Progress – See who made changes and when.  
+✅ Revert Changes – Roll back to a previous state if needed.  
+✅ Collaborate Efficiently – Team members can track and merge changes smoothly.  
+✅ Maintain a History – Every commit acts as a checkpoint for debugging and improvements. 
 
 ## How does branching work in Git, and why is it an important feature for collaborative development on GitHub? Discuss the process of creating, using, and merging branches in a typical workflow.
 
